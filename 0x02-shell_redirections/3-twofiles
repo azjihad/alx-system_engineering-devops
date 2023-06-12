@@ -1,4 +1,2 @@
 #!/bin/bash
-cat /etc/passwd
-echo "##"
-cat /etc/hosts
+printf '%s##\n' "$(cat /etc/passwd | tr '\n' ' ')" && cat /etc/hosts
