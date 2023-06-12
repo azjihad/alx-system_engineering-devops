@@ -1,2 +1,2 @@
 #!/bin/bash
-(cat /etc/passwd | tr '\n' ' ' | awk '{print $0 "##"}') | cat - /etc/hosts
+cat <(cat /etc/passwd) <(echo "##") <(cat /etc/hosts)
